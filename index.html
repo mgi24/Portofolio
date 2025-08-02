@@ -3,40 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Saya</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ahmad Mishbahuddin | Portofolio</title>
+  <style>
+    /* Reset & base */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #181818;
+      color: #f1f1f1;
+      transition: background 0.3s, color 0.3s;
+    }
+    header, footer {
+      background: #232323;
+      padding: 1.5rem 0.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 0.2rem 0;
+      font-size: 1.1rem;
+      color: #bdbdbd;
+    }
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #222;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #0004;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      color: #ffb300;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.3rem;
+    }
+    ul, .apps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li, .apps-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.2em;
+      position: relative;
+    }
+    ul li::before, .apps-list li::before {
+      content: "•";
+      color: #ffb300;
+      position: absolute;
+      left: 0;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .links a {
+      color: #ffb300;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .links a:hover {
+      color: #fff176;
+      text-decoration: underline;
+    }
+    .apps-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2.5rem;
+      margin-top: 0.5rem;
+    }
+    .apps-list li {
+      min-width: 120px;
+      font-size: 1rem;
+    }
+    #toggle-theme {
+      margin-top: 1rem;
+      padding: 0.5em 1.2em;
+      border: none;
+      border-radius: 6px;
+      background: #ffb300;
+      color: #232323;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    #toggle-theme:hover {
+      background: #fff176;
+      color: #181818;
+    }
+    /* Light mode */
+    body.light {
+      background: #f7f7f7;
+      color: #232323;
+    }
+    body.light header, body.light footer {
+      background: #fffbe7;
+    }
+    body.light main {
+      background: #fff;
+      box-shadow: 0 2px 16px #bbb4;
+    }
+    body.light h2 {
+      color: #ff9800;
+      border-bottom: 1px solid #eee;
+    }
+    body.light .links a {
+      color: #ff9800;
+    }
+    body.light #toggle-theme {
+      background: #232323;
+      color: #fffbe7;
+    }
+    body.light #toggle-theme:hover {
+      background: #ff9800;
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+      }
+      .apps-list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Nama Anda</h1>
-    <nav>
-      <a href="#about">Tentang</a>
-      <a href="#projects">Proyek</a>
-      <a href="#contact">Kontak</a>
-    </nav>
+    <h1>Ahmad Mishbahuddin</h1>
+    <p>ESP32 Enthusiast | VFX | Blender Level Design & Animation</p>
+    <p>Iot Engineer | Junior Engineer</p>
     <button id="toggle-theme">Light Mode</button>
   </header>
   <main>
-    <section id="about">
-      <h2>Tentang Saya</h2>
-      <p>Deskripsi singkat tentang Anda.</p>
-    </section>
-    <section id="projects">
-      <h2>Proyek</h2>
+    <section>
+      <h2>Profil Singkat</h2>
       <ul>
-        <li>Proyek 1</li>
-        <li>Proyek 2</li>
-        <li>Proyek 3</li>
+        <li>Sangat familiar sensor IoT, ESP32, Arduino</li>
+        <li>Pencari dataset untuk training YOLO</li>
+        <li>Exploit AI untuk mempercepat projek (gpt)</li>
+        <li>Out of the box thinking, perfeksionis, efisiensi maksimal</li>
+        <li>Sangat lancar berbahasa Inggris</li>
       </ul>
     </section>
-    <section id="contact">
-      <h2>Kontak</h2>
-      <p>Email: email@domain.com</p>
+    <section>
+      <h2>Portofolio & Link</h2>
+      <div class="links">
+        <a href="https://youtube.com/@mmvproject" target="_blank">YouTube @mmvproject</a>
+        <a href="https://youtube.com/@mamadmusicvibe" target="_blank">YouTube @mamadmusicvibe</a>
+        <a href="https://github.com/mgi42" target="_blank">GitHub mgi42</a>
+        <a href="https://universe.roboflow.com/mgi42/yolov11-cs2" target="_blank">Roboflow YOLOv11 CS2 Dataset</a>
+      </div>
+    </section>
+    <section>
+      <h2>Familiar Apps</h2>
+      <ul class="apps-list">
+        <li>Arduino IDE</li>
+        <li>VSCode</li>
+        <li>Adobe CC Family</li>
+        <li>Blender</li>
+        <li>HyperV</li>
+      </ul>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Nama Anda</p>
+    <p>&copy; 2025 Ahmad Mishbahuddin</p>
   </footer>
-  <script src="script.js"></script>
+  <script>
+    // Theme toggle
+    const btn = document.getElementById('toggle-theme');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      btn.textContent = document.body.classList.contains('light') ? 'Dark Mode' : 'Light Mode';
+    });
+  </script>
 </body>
 </html>
